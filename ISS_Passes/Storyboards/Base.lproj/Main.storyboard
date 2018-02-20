@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N9b-ES-55m">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ISS Position-->
+        <scene sceneID="M4r-Zj-kcu">
+            <objects>
+                <viewController id="3G2-NO-Ens" customClass="CurrentLocationViewController" customModule="ISS_Passes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zyx-nR-MVP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISS Current Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="1k4-gK-jIY">
+                                <rect key="frame" x="16" y="208" width="343" height="26.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26.329999999999998" id="i69-wW-gEr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="nIw-92-pie">
+                                <rect key="frame" x="16" y="242" width="164.66666666666666" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="zFO-2M-w72">
+                                <rect key="frame" x="16" y="272" width="164.66666666666666" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9y-TK-D63">
+                                <rect key="frame" x="194.33333333333337" y="250" width="164.66666666666663" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWD-xt-NeX">
+                                <rect key="frame" x="194.33333333333337" y="242" width="164.66666666666663" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nIw-92-pie" firstAttribute="top" secondItem="1k4-gK-jIY" secondAttribute="bottom" constant="7.6666666666666572" id="3sf-Z7-Hug"/>
+                            <constraint firstItem="zFO-2M-w72" firstAttribute="leading" secondItem="l6L-ie-l4B" secondAttribute="leading" constant="16" id="9Rt-ZS-aI6"/>
+                            <constraint firstItem="l6L-ie-l4B" firstAttribute="trailing" secondItem="wWD-xt-NeX" secondAttribute="trailing" constant="16" id="I39-uR-7LD"/>
+                            <constraint firstItem="X9y-TK-D63" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zFO-2M-w72" secondAttribute="trailing" constant="1" id="IDS-TX-EZz"/>
+                            <constraint firstItem="1k4-gK-jIY" firstAttribute="top" secondItem="l6L-ie-l4B" secondAttribute="top" constant="164" id="Ls4-sr-43U"/>
+                            <constraint firstItem="zFO-2M-w72" firstAttribute="width" secondItem="nIw-92-pie" secondAttribute="width" id="T3e-WF-Ecb"/>
+                            <constraint firstItem="nIw-92-pie" firstAttribute="width" secondItem="1k4-gK-jIY" secondAttribute="width" multiplier="0.48" id="TOa-iE-uYE"/>
+                            <constraint firstItem="X9y-TK-D63" firstAttribute="width" secondItem="wWD-xt-NeX" secondAttribute="width" id="UYE-gF-aV5"/>
+                            <constraint firstItem="X9y-TK-D63" firstAttribute="top" secondItem="wWD-xt-NeX" secondAttribute="bottom" constant="8" id="aVN-sE-klR"/>
+                            <constraint firstItem="nIw-92-pie" firstAttribute="width" secondItem="wWD-xt-NeX" secondAttribute="width" id="ah9-gC-LY0"/>
+                            <constraint firstItem="1k4-gK-jIY" firstAttribute="leading" secondItem="l6L-ie-l4B" secondAttribute="leading" constant="16" id="fmR-CK-Kbb"/>
+                            <constraint firstItem="wWD-xt-NeX" firstAttribute="top" secondItem="1k4-gK-jIY" secondAttribute="bottom" constant="7.6666666666666572" id="kAK-pB-Ood"/>
+                            <constraint firstItem="nIw-92-pie" firstAttribute="leading" secondItem="l6L-ie-l4B" secondAttribute="leading" constant="16" id="oMN-gk-OUJ"/>
+                            <constraint firstItem="l6L-ie-l4B" firstAttribute="trailing" secondItem="1k4-gK-jIY" secondAttribute="trailing" constant="16" id="rmi-zY-bmx"/>
+                            <constraint firstItem="l6L-ie-l4B" firstAttribute="trailing" secondItem="X9y-TK-D63" secondAttribute="trailing" constant="16" id="unn-z0-1ge"/>
+                            <constraint firstItem="wWD-xt-NeX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nIw-92-pie" secondAttribute="trailing" constant="1" id="vW4-UU-afV"/>
+                            <constraint firstItem="zFO-2M-w72" firstAttribute="top" secondItem="nIw-92-pie" secondAttribute="bottom" constant="9" id="xUq-Hs-nPk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l6L-ie-l4B"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ISS Position" id="n5o-D5-GVc"/>
+                    <connections>
+                        <outlet property="latitudeLabel" destination="wWD-xt-NeX" id="A5I-9H-xHp"/>
+                        <outlet property="longitudeLabel" destination="X9y-TK-D63" id="xZ6-su-Q0K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nq-s4-eoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698.39999999999998" y="199.50738916256159"/>
+        </scene>
+        <!--Space Goers-->
+        <scene sceneID="ahw-l7-ZGh">
+            <objects>
+                <tableViewController id="hAh-Hh-MUh" customClass="AstronautsViewController" customModule="ISS_Passes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Df2-K5-ePj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="hAh-Hh-MUh" id="dPR-iW-ATd"/>
+                            <outlet property="delegate" destination="hAh-Hh-MUh" id="XF9-4F-0Xj"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Space Goers" id="b82-eH-SEY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVr-mw-7RB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="924"/>
+        </scene>
+        <!--Passes-->
+        <scene sceneID="YLl-7s-hK2">
+            <objects>
+                <tableViewController id="fl9-P4-mMm" customClass="PassesTableViewController" customModule="ISS_Passes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DQr-qV-CHw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="fl9-P4-mMm" id="Ubx-Zy-rXl"/>
+                            <outlet property="delegate" destination="fl9-P4-mMm" id="87O-c1-415"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Passes" id="ORy-kR-ukX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4jW-bV-Bf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="-463"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6C9-SG-IQu">
+            <objects>
+                <tabBarController id="N9b-ES-55m" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cmb-sh-zV6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fl9-P4-mMm" kind="relationship" relationship="viewControllers" id="Ihp-Gn-BgI"/>
+                        <segue destination="3G2-NO-Ens" kind="relationship" relationship="viewControllers" id="EhE-ON-4vJ"/>
+                        <segue destination="hAh-Hh-MUh" kind="relationship" relationship="viewControllers" id="QBL-Fn-GRo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VnV-W4-Efy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-273" y="-76"/>
+        </scene>
+    </scenes>
+</document>
