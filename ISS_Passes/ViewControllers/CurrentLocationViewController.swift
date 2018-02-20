@@ -19,6 +19,7 @@ class CurrentLocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //Start timer
         self.runTimer()
     }
     
@@ -38,10 +39,12 @@ class CurrentLocationViewController: UIViewController {
     }
     
     private func runTimer() {
+        //As per documentation the ISS-Now service a single client should try and keep polling to about once every 5 seconds.
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self,   selector: #selector(CurrentLocationViewController.fetchISSPosition), userInfo: nil, repeats: true)
     }
     
     @objc func fetchISSPosition() {
+        //Fetch the ISS position form the service
         OpenNotify.getISSPosition { (position) in
             self.currentPosition = position
             DispatchQueue.main.async {
@@ -56,6 +59,7 @@ class CurrentLocationViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        //Invalidate the timer
         timer.invalidate()
     }
 }
