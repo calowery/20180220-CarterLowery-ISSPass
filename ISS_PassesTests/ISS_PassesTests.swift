@@ -21,9 +21,36 @@ class ISS_PassesTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testGetISSPosition() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        OpenNotify.getISSPosition { (position) in
+
+        }
+    }
+    
+    func testGetSpaceMen() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        OpenNotify.getSpaceMen { (spaceMen) in
+
+        }
+    }
+    
+    func testGetPassTimesNoAltitude() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        OpenNotify.getPassTimes(lat: 37.3323, lon: -122.031, alt: nil) { (passTimes) in
+
+        }
+    }
+    
+    func testGetPassTimesWithAltitude() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        OpenNotify.getPassTimes(lat: 37.3323, lon: -122.031, alt: 15.0) { (passTimes) in
+
+        }
     }
     
     func testPerformanceExample() {
@@ -32,5 +59,7 @@ class ISS_PassesTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    
     
 }
