@@ -9,9 +9,9 @@
 import Foundation
 
 public class ISSPosition {
-    public var timestamp : String?
-    public var latitude : String?
-    public var longitude : String?
+    private(set) var timestamp : String?
+    private(set) var latitude : String?
+    private(set) var longitude : String?
 
     /**
      Constructs the object based on the given dictionary.

@@ -9,8 +9,8 @@
 import Foundation
 
 public class PassTime {
-    public var risetime : String?
-    public var duration : String?
+    private(set) var risetime : String?
+    private(set) var duration : String?
     
     /**
      Returns an array of models based on given dictionary.

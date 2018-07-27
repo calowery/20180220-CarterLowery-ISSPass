@@ -9,8 +9,8 @@
 import Foundation
 
 public class SpaceMan {
-    public var name : String?
-    public var craft : String?
+    private(set) var name : String?
+    private(set) var craft : String?
     
     /**
      Returns an array of models based on given dictionary.

@@ -14,7 +14,13 @@ class CurrentLocationViewController: UIViewController {
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     
-    var currentPosition: ISSPosition?
+    var currentPosition: ISSPosition? {
+        didSet {
+            DispatchQueue.main.async {
+                self.setLabelText()
+            }
+        }
+    }
     var timer = Timer()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,9 +53,9 @@ class CurrentLocationViewController: UIViewController {
         //Fetch the ISS position form the service
         OpenNotify.getISSPosition { (position) in
             self.currentPosition = position
-            DispatchQueue.main.async {
-                self.setLabelText()
-            }
+//            DispatchQueue.main.async {
+//                self.setLabelText()
+//            }
         }
     }
     

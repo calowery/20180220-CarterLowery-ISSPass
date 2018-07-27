@@ -77,8 +77,10 @@ class PassesTableViewController: UITableViewController, CLLocationManagerDelegat
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             self.currentLocation = location
+            // stop location updating after location update has been retrieved
             self.locationManager.stopUpdatingLocation()
             fetchISSPassData()
+            // restart location updating after a 30 sec time interval
             let _ = Timer(timeInterval: 30, repeats: false, block: { (_) in
                 self.locationManager.startUpdatingLocation()
             })
